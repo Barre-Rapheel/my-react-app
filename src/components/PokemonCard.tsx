@@ -10,6 +10,7 @@ const pokemonList = [
   ];
 
   function PokemonCard() {
+    
     const pokemon = pokemonList[0];
   
     return (
@@ -17,9 +18,9 @@ const pokemonList = [
         {pokemon.imgSrc ? (
           <img src={pokemon.imgSrc} alt={pokemon.name} />
         ) : (
-          <p>???</p>
+          <p>???</p> // Si l'image n'existe pas, afficher "???"
         )}
-        <figcaption>{pokemon.name}</figcaption>
+        <figcaption>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</figcaption>
       </figure>
     );
   }
