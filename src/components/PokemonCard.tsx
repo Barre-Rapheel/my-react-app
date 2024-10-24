@@ -9,9 +9,11 @@ const pokemonList = [
     },
   ];
 
-  function PokemonCard() {
-    
-    const pokemon = pokemonList[0];
+  function PokemonCard(props: any) {
+    // Affichage de l'objet props dans la console du navigateur
+    console.log(props);
+     
+    const pokemon = pokemonList[1];
   
     return (
       <figure>
