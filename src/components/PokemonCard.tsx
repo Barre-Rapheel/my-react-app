@@ -1,19 +1,8 @@
-const pokemonList = [
-    {
-      name: "bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "mew",
-    },
-  ];
 
-  function PokemonCard(props: any) {
+
+  function PokemonCard({ pokemon }) {
     // Affichage de l'objet props dans la console du navigateur
-    console.log(props);
-     
-    const pokemon = pokemonList[1];
+    
   
     return (
       <figure>
