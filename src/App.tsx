@@ -44,18 +44,17 @@ const handleNext = () => {
 };
   return(
     <div>
-    /* Utilisation de pokemonIndex pour accéder au Pokémon dans pokemonList */
-  <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-
-    {/* Boutons de navigation avec gestion d'événements onClick */}
-     
-     {/* Bouton Précédent rendu uniquement si pokemonIndex > 0 */}
-     {pokemonIndex > 0 && (
+      {/*Utilisation de pokemonIndex pour accéder au Pokémon dans pokemonList */}
+      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+      
+      {/* Boutons de navigation avec gestion d'événements onClick */}
+       
+       {/* Bouton Précédent rendu uniquement si pokemonIndex > 0 */}
+       {pokemonIndex > 0 && (
         <button onClick={handlePrevious}>Précédent</button>
-      )}
-
-     {/* Bouton Suivant rendu uniquement si pokemonIndex < pokemonList.length - 1 */}
-     {pokemonIndex < pokemonList.length - 1 && (
+       )}
+       {/* Bouton Suivant rendu uniquement si pokemonIndex < pokemonList.length - 1 */}
+       {pokemonIndex < pokemonList.length - 1 && (
         <button onClick={handleNext}>Suivant</button>
       )}
     </div>
