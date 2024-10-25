@@ -53,6 +53,7 @@ const handleNext = () => {
        {pokemonIndex > 0 && (
         <button onClick={handlePrevious}>Précédent</button>
        )}
+       
        {/* Bouton Suivant rendu uniquement si pokemonIndex < pokemonList.length - 1 */}
        {pokemonIndex < pokemonList.length - 1 && (
         <button onClick={handleNext}>Suivant</button>
