@@ -1,8 +1,6 @@
-
 import { useState } from 'react';
 import './App.css';
 import PokemonCard from './components/PokemonCard';
-import NavBar from './components/NavBar';
 
 const pokemonList = [
   {
@@ -33,30 +31,26 @@ const pokemonList = [
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
-  const handlePrevious = () => {
-    setPokemonIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : pokemonList.length - 1));
-  };
-
-  const handleNext = () => {
-    setPokemonIndex((prevIndex) => (prevIndex < pokemonList.length - 1 ? prevIndex + 1 : 0));
-  };
-
   return (
     <div>
-      {/* Utilisation de pokemonIndex pour afficher le Pokémon actuel */}
+      <nav>
+        {pokemonList.map((pokemon, index) => (
+          <button 
+            key={pokemon.name}   // Utilisation de pokemon.name comme key
+            onClick={() => setPokemonIndex(index)}  // Gestionnaire onClick pour mettre à jour pokemonIndex
+          >
+            {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+          </button>
+        ))}
+      </nav>
+      
+      {/* Affichage du Pokémon sélectionné */}
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-
-      {/* NavBar reçoit les props pour contrôler les boutons */}
-      <NavBar
-        onPrevious={handlePrevious}
-        onNext={handleNext}
-        showPrevious={pokemonIndex > 0}
-        showNext={pokemonIndex < pokemonList.length - 1}
-      />
     </div>
   );
 }
 
 export default App;
+
 
   
