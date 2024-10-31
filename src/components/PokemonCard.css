@@ -1,0 +1,50 @@
+.card {
+    width: 200px;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+    text-shadow: 0px 0px 5px gray;
+    margin: 1rem auto;
+  }
+  
+  .cardImg {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    border-radius: inherit;
+    box-shadow: inherit;
+  }
+  
+  /* Couleurs spécifiques par Pokémon */
+  .card-bulbasaur {
+    background-color: lightgreen;
+  }
+  
+  .card-charmander {
+    background-color: orange;
+  }
+  
+  .card-squirtle {
+    background-color: lightblue;
+  }
+  
+  .card-pikachu {
+    background-color: yellow;
+  }
+  
+  /* Style pour les cartes sans image */
+  .card-no-image {
+    background-color: lightgray;
+  }
+  
+  /* Texte en noir pour les cartes sans image */
+  .no-image-text {
+    color: black;
+    text-shadow: none;
+  }
+  
+  
